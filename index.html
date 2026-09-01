@@ -1,41 +1,1293 @@
+Sure — here is the complete index.html as a single copy-paste-ready code file:
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Name | Backend Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Prerna Singh - Senior Business Development Engineer specializing in Pharma, BioPharma, Business Development, Filtration and Purification Technologies."
+  >
+  <meta name="author" content="Prerna Singh">
+
+  <title>Prerna Singh | Senior Business Development Engineer</title>
+
   <style>
-    body {
-      font-family: Arial;
-      margin: 40px;
-      background: #f5f5f5;
-      color: #333;
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --accent: #14b8a6;
+      --dark: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+      --light: #f8fafc;
+      --border: #e2e8f0;
+      --white: #ffffff;
+      --gradient: linear-gradient(135deg, #0f766e, #0f4c81);
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     }
-    h1 { color: #2c3e50; }
-    .section { margin-top: 30px; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: var(--white);
+      padding: 100px 0 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(20, 184, 166, 0.08);
+      right: -180px;
+      top: -180px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--primary);
+      background: #ccfbf1;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: var(--dark);
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 30px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      background: var(--light);
+      border: 1px solid var(--border);
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+
+    .contact-item:hover {
+      border-color: var(--accent);
+      color: var(--primary);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+      box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* =========================
+       HERO CARD
+    ========================= */
+
+    .hero-card {
+      background: var(--gradient);
+      color: white;
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+    }
+
+    .stat {
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stat:last-child {
+      border-bottom: none;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .stat span {
+      opacity: 0.85;
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-header {
+      margin-bottom: 45px;
+    }
+
+    .section-label {
+      color: var(--primary);
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: var(--dark);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      letter-spacing: -0.03em;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-top: 10px;
+      max-width: 700px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-card {
+      background: white;
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      font-size: 1.02rem;
+    }
+
+    .about-card p {
+      margin-bottom: 20px;
+    }
+
+    .about-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      box-shadow: var(--shadow);
+      color: var(--primary);
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience {
+      background: white;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 950px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: #cbd5e1;
+    }
+
+    .job {
+      position: relative;
+      padding-left: 45px;
+      margin-bottom: 55px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 4px solid #ccfbf1;
+      box-sizing: border-box;
+    }
+
+    .job-date {
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .job h3 {
+      color: var(--dark);
+      font-size: 1.45rem;
+      margin-bottom: 3px;
+    }
+
+    .company {
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .job-focus {
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .job ul {
+      padding-left: 20px;
+    }
+
+    .job li {
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education {
+      background: var(--light);
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .education-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: 0.2s ease;
+    }
+
+    .education-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .education-year {
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .education-card h3 {
+      color: var(--dark);
+      font-size: 1.2rem;
+      margin-bottom: 7px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+    }
+
+    .percentage {
+      display: inline-block;
+      margin-top: 15px;
+      background: #ccfbf1;
+      color: var(--primary-dark);
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact .section-label {
+      color: var(--accent);
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 15px auto 30px;
+      color: #cbd5e1;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-link {
+      border: 1px solid #475569;
+      padding: 12px 18px;
+      border-radius: 10px;
+      transition: 0.2s ease;
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 0.85rem;
+    }
+
+    /* =========================
+       RESPONSIVE DESIGN
+    ========================= */
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 25px;
+      }
+
+      .contact-row {
+        flex-direction: column;
+      }
+
+      .contact-item {
+        width: 100%;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .about-card {
+        padding: 25px;
+      }
+
+      .job {
+        padding-left: 35px;
+      }
+    }
+
+    /* =========================
+       PRINT
+    ========================= */
+
+    @media print {
+      nav,
+      .buttons,
+      .contact {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      section,
+      .hero {
+        padding: 30px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        background: #f1f5f9;
+        color: #0f172a;
+      }
+
+      .stat {
+        border-color: #cbd5e1;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <h1>Your Name</h1>
-  <p>Senior Backend Engineer | Java | Kafka | Microservices</p>
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>8+ years building scalable fintech and automation systems.</p>
-  </div>
+  <nav>
+    <div class="container nav-inner">
 
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li>High-throughput Kafka pipeline (X TPS)</li>
-      <li>Microservices architecture for fintech platform</li>
-    </ul>
-  </div>
+      <a href="#home" class="logo">
+        Prerna<span>.</span>
+      </a>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>GitHub: github.com/yourusername</p>
-  </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+          <a href="#education">Education</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO SECTION
+  ========================= -->
+
+  <header class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <span class="eyebrow">
+          Pharma • BioPharma • Business Development
+        </span>
+
+        <h1>
+          Prerna Singh
+        </h1>
+
+        <div class="hero-title">
+          Senior Business Development Engineer
+        </div>
+
+        <p class="hero-description">
+          Techno Sales Specialist with 7 years of experience across Pharma
+          and BioPharma, combining technical expertise in biopharmaceutical
+          manufacturing with business development, key account management,
+          project sales, and marketing strategy.
+        </p>
+
+        <div class="contact-row">
+
+          <a
+            class="contact-item"
+            href="tel:+917452840098"
+          >
+            +91 74528 40098
+          </a>
+
+          <a
+            class="contact-item"
+            href="mailto:prerna.singh91195@gmail.com"
+          >
+            prerna.singh91195@gmail.com
+          </a>
+
+          <span class="contact-item">
+            Chandigarh, India
+          </span>
+
+        </div>
+
+        <div class="buttons">
+
+          <a
+            href="#experience"
+            class="btn btn-primary"
+          >
+            View Experience
+          </a>
+
+          <a
+            href="mailto:prerna.singh91195@gmail.com"
+            class="btn btn-secondary"
+          >
+            Get In Touch
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Career Statistics -->
+
+      <aside class="hero-card">
+
+        <h3>
+          Career Highlights
+        </h3>
+
+        <div class="stat">
+
+          <strong>
+            7+
+          </strong>
+
+          <span>
+            Years of Industry Experience
+          </span>
+
+        </div>
+
+        <div class="stat">
+
+          <strong>
+            USD 1.5M
+          </strong>
+
+          <span>
+            Annual Sales Achieved
+          </span>
+
+        </div>
+
+        <div class="stat">
+
+          <strong>
+            4+
+          </strong>
+
+          <span>
+            Years in BioPharmaceutical Manufacturing
+          </span>
+
+        </div>
+
+        <div class="stat">
+
+          <strong>
+            2+
+          </strong>
+
+          <span>
+            Years in Business Development
+          </span>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       ABOUT SECTION
+  ========================= -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Professional Snapshot
+        </div>
+
+        <h2>
+          Technical expertise meets business growth.
+        </h2>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <p>
+          I am a techno-sales professional with a strong foundation in
+          pharmaceutical and biopharmaceutical manufacturing and growing
+          expertise in business development and strategic sales.
+        </p>
+
+        <p>
+          My experience spans upstream and downstream bioprocessing,
+          filtration and purification technologies, project sales,
+          customer acquisition, key account management, channel management,
+          pricing strategy, and cross-functional execution.
+        </p>
+
+        <p>
+          With hands-on manufacturing experience and commercial exposure,
+          I bring a practical understanding of customer requirements and
+          the ability to translate technical solutions into sustainable
+          business opportunities.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SKILLS SECTION
+  ========================= -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Core Competencies
+        </div>
+
+        <h2>
+          What I bring to the table
+        </h2>
+
+        <p class="section-subtitle">
+          A combination of commercial, technical, strategic, and
+          relationship-management capabilities.
+        </p>
+
+      </div>
+
+
+      <div class="skills-grid">
+
+        <div class="skill">
+          Business Development
+        </div>
+
+        <div class="skill">
+          Key Account Management
+        </div>
+
+        <div class="skill">
+          Project Sales
+        </div>
+
+        <div class="skill">
+          Filtration &amp; Purification Technologies
+        </div>
+
+        <div class="skill">
+          Territory Management
+        </div>
+
+        <div class="skill">
+          Market Analysis &amp; Revenue Growth
+        </div>
+
+        <div class="skill">
+          Marketing Strategy Development
+        </div>
+
+        <div class="skill">
+          Negotiation &amp; Sales Closing
+        </div>
+
+        <div class="skill">
+          Relationship Building
+        </div>
+
+        <div class="skill">
+          Presentation &amp; Proposal Development
+        </div>
+
+        <div class="skill">
+          Team Leadership
+        </div>
+
+        <div class="skill">
+          Business Sustainability
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       EXPERIENCE SECTION
+  ========================= -->
+
+  <section class="experience" id="experience">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Career Journey
+        </div>
+
+        <h2>
+          Professional Experience
+        </h2>
+
+        <p class="section-subtitle">
+          Experience across business development, biopharmaceutical
+          manufacturing, upstream processing, and downstream purification.
+        </p>
+
+      </div>
+
+
+      <div class="timeline">
+
+
+        <!-- Saint Gobain -->
+
+        <article class="job">
+
+          <div class="job-date">
+            JUN 2024 — PRESENT
+          </div>
+
+          <h3>
+            Senior Business Development Engineer
+          </h3>
+
+          <div class="company">
+            Saint Gobain Life Sciences · Bengaluru
+          </div>
+
+          <div class="job-focus">
+            Driving Business Growth · Customer Acquisition · Strategic Channel Management
+          </div>
+
+          <ul>
+
+            <li>
+              Achieved
+              <strong>USD 1.5M in annual sales</strong>
+              through strategic account management, sales closure,
+              and business development.
+            </li>
+
+            <li>
+              Lead new customer acquisition and onboarding, expanding
+              market presence and strengthening revenue growth.
+            </li>
+
+            <li>
+              Develop and execute pricing strategies to optimize revenue,
+              margins, and market competitiveness.
+            </li>
+
+            <li>
+              Manage channel partners and distributors to drive sales
+              growth and ensure seamless order fulfillment.
+            </li>
+
+            <li>
+              Build strategic customer relationships and lead
+              cross-functional execution across sales, operations,
+              quality, and delivery.
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <!-- Syngene -->
+
+        <article class="job">
+
+          <div class="job-date">
+            JUN 2021 — JUN 2024
+          </div>
+
+          <h3>
+            Executive — Upstream Processing
+          </h3>
+
+          <div class="company">
+            Syngene International · Bengaluru
+          </div>
+
+          <div class="job-focus">
+            Upstream Manufacturing · Cell Culture · GMP Documentation · Process Qualification
+          </div>
+
+          <ul>
+
+            <li>
+              Executed upstream manufacturing operations across scales
+              from wave bioreactors to
+              <strong>2 KL disposable bioreactors</strong>.
+            </li>
+
+            <li>
+              Managed cell culture processes across multiple
+              manufacturing scales and product requirements.
+            </li>
+
+            <li>
+              Prepared and reviewed MFRs, BMRs, SOPs, and PPQ
+              protocols/reports for various products.
+            </li>
+
+            <li>
+              Maintained GMP-compliant documentation through EDMS,
+              supporting manufacturing and process qualification
+              activities.
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <!-- Zydus -->
+
+        <article class="job">
+
+          <div class="job-date">
+            OCT 2019 — MAY 2021
+          </div>
+
+          <h3>
+            Executive — Downstream Processing
+          </h3>
+
+          <div class="company">
+            Zydus Biologics · Ahmedabad
+          </div>
+
+          <div class="job-focus">
+            Downstream Processing · Chromatography · Filtration · Regulatory Compliance
+          </div>
+
+          <ul>
+
+            <li>
+              Executed end-to-end downstream purification from batch
+              harvest to final DS preparation and storage.
+            </li>
+
+            <li>
+              Managed chromatography operations, including column
+              packing, unpacking, and evaluation across GE, Sartorius,
+              Pall, and Millipore systems.
+            </li>
+
+            <li>
+              Executed TFF, DF/UF/DF, aseptic, and virus filtration
+              processes for mammalian protein products.
+            </li>
+
+            <li>
+              Supported regulatory and partner audits and operated
+              critical downstream systems including AKTA, TFF,
+              Sartorius DS Filling, and Freeze-Thaw systems.
+            </li>
+
+          </ul>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       EDUCATION SECTION
+  ========================= -->
+
+  <section class="education" id="education">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Academic Background
+        </div>
+
+        <h2>
+          Education
+        </h2>
+
+      </div>
+
+
+      <div class="education-grid">
+
+
+        <!-- M.Tech -->
+
+        <article class="education-card">
+
+          <div class="education-year">
+            2022 — 2024
+          </div>
+
+          <h3>
+            M. Tech. Pharmaceutical Operations &amp; Management
+          </h3>
+
+          <p>
+            Birla Institute of Technology and Science, Pilani
+          </p>
+
+          <span class="percentage">
+            79%
+          </span>
+
+        </article>
+
+
+        <!-- B.Tech -->
+
+        <article class="education-card">
+
+          <div class="education-year">
+            2015 — 2019
+          </div>
+
+          <h3>
+            B. Tech. Biotechnology
+          </h3>
+
+          <p>
+            Dr. A.P.J. Abdul Kalam Technical University
+          </p>
+
+          <span class="percentage">
+            81%
+          </span>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT SECTION
+  ========================= -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="section-label">
+        Let's Connect
+      </div>
+
+      <h2>
+        Let's build something meaningful.
+      </h2>
+
+      <p>
+        Interested in business development, biopharma technologies,
+        strategic partnerships, or opportunities to create sustainable
+        business growth? I'd love to connect.
+      </p>
+
+
+      <div class="contact-links">
+
+        <a
+          class="contact-link"
+          href="mailto:prerna.singh91195@gmail.com"
+        >
+          Email Me
+        </a>
+
+        <a
+          class="contact-link"
+          href="tel:+917452840098"
+        >
+          Call Me
+        </a>
+
+        <a
+          class="contact-link"
+          href="https://prerna-singh9.github.io/portfolio/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Portfolio
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 Prerna Singh. All rights reserved.
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
